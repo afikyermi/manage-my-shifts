@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage My Shifts - משמרות</title>
+    <script src="js/utils.js" defer></script>
+    <script src="js/shifts.js" defer></script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/shifts.css">
+</head>
+<body>
+    <header>
+        <h1>Manage My Shifts</h1>
+        <h2>עמוד משמרות</h2>
+    </header>
+
+<nav>
+        <div class="nav-right">
+            שלום, <span id="currentUserName"></span>
+        </div>
+
+        <ul class="nav-center">
+            <li><a href="shifts.html">משמרות</a></li>
+            <li><a href="profile-update.html">עריכת פרופיל</a></li>
+            <li><a href="add-update-shift.html">הוספת משמרת</a></li>
+            <li><a href="resume-update.html">קורות חיים</a></li>
+        </ul>
+
+        <div class="nav-left">
+            <button type="button" id="logoutButton">התנתק</button>
+        </div>
+    </nav>
+
+    <main>
+        <section>
+            <h3>סינון משמרות</h3>
+            <form id="filterForm">
+                <div>
+                    <label for="filterBranch">סניף:</label>
+                    <select id="filterBranch" name="branch">
+                        <option value="">כל הסניפים</option>
+                        <option value="tel-aviv">ת"א</option>
+                        <option value="haifa">חיפה</option>
+                        <option value="jerusalem">ירושלים</option>
+                        <option value="beer-sheva">ב"ש</option>
+                        <option value="eilat">אילת</option>
+                        <option value="raanana">רעננה</option>
+                        <option value="kiryat-gat">קרית גת</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="filterRole">תפקיד:</label>
+                    <input type="text" id="filterRole" name="role">
+                </div>
+
+                <div>
+                    <button type="submit">סינון</button>
+                </div>
+            </form>
+        </section>
+
+        <section>
+            <div class="table-header">
+                <h3>רשימת משמרות</h3>
+                <a href="add-update-shift.html" class="add-shift-btn">הוספת משמרת</a>
+            </div>
+
+            <table id="shiftsTable" border="1">
+                <thead>
+                    <tr>
+                        <th>תאריך</th>
+                        <th>שעת התחלה</th>
+                        <th>שעת סיום</th>
+                        <th>שכר שעתי</th>
+                        <th>תפקיד</th>
+                        <th>סניף</th>
+                        <th>שכר כולל למשמרת</th>
+                        <th>הערות</th>
+                        <th>מחיקה</th>
+                        <th>עדכון</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    </tbody>
+            </table>
+        </section>
+
+        <section>
+            <p>שכר כולל: <span id="totalSalary">0.00 ₪</span></p>
+        </section>
+    </main>
+</body>
+</html>

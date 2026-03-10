@@ -1,0 +1,54 @@
+/* עיצוב ייחודי לעמוד משמרות */
+
+/* כותרת וכפתור בשורה אחת */
+.table-header {
+    display: flex;             
+    justify-content: space-between; 
+    align-items: center;       
+    margin-bottom: 15px;
+}
+
+.table-header h3 {
+    margin: 0;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+/* כפתור הוספת משמרת ירוק */
+.add-shift-btn {
+    background-color: var(--success-color); 
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none; 
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: opacity 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.add-shift-btn:hover {
+    opacity: 0.9;
+    text-decoration: none;
+}
+
+/* כפתורי פעולה בתוך הטבלה */
+.delete-btn {
+    background-color: var(--danger-color);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.edit-btn {
+    background-color: #f39c12; /* כתום */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-left: 5px;
+}

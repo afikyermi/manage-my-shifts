@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage My Shifts - עדכון פרופיל</title>
+    <script src="js/utils.js" defer></script>
+    <script src="js/profile-update.js" defer></script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/profile-update.css">
+</head>
+<body>
+    <header>
+        <h1>Manage My Shifts</h1>
+        <h2>עדכון פרטי משתמש</h2>
+    </header>
+
+<nav>
+        <div class="nav-right">
+            שלום, <span id="currentUserName"></span>
+        </div>
+
+        <ul class="nav-center">
+            <li><a href="shifts.html">משמרות</a></li>
+            <li><a href="profile-update.html">עריכת פרופיל</a></li>
+            <li><a href="add-update-shift.html">הוספת משמרת</a></li>
+            <li><a href="resume-update.html">קורות חיים</a></li>
+        </ul>
+
+        <div class="nav-left">
+            <button type="button" id="logoutButton">התנתק</button>
+        </div>
+    </nav>
+
+    <main>
+        <section>
+            <h3>פרטי משתמש</h3>
+            <form id="profileForm">
+                <div>
+                    <label for="profileEmail">מייל:</label>
+                    <input type="email" id="profileEmail" name="email">
+                </div>
+
+                <div>
+                    <label for="profilePassword">סיסמה (השאר ריק ללא שינוי):</label>
+                    <input type="password" id="profilePassword" name="password">
+                </div>
+
+                <div>
+                    <label for="profileConfirmPassword">אימות סיסמה:</label>
+                    <input type="password" id="profileConfirmPassword" name="confirmPassword">
+                </div>
+
+                <div>
+                    <label for="profileFirstName">שם פרטי:</label>
+                    <input type="text" id="profileFirstName" name="firstName">
+                </div>
+
+                <div>
+                    <label for="profileLastName">שם משפחה:</label>
+                    <input type="text" id="profileLastName" name="lastName">
+                </div>
+
+                <div>
+                    <label for="profileAge">גיל:</label>
+                    <input type="number" id="profileAge" name="age">
+                </div>
+
+                <div>
+                    <button type="submit">שמירה</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    
+</body>
+</html>

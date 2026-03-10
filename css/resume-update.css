@@ -1,0 +1,168 @@
+/* =========================================
+   1. עיצוב הטבלאות (אזור הניהול והעריכה)
+   ========================================= */
+.table-container table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    margin-bottom: 20px;
+}
+
+.table-container th, 
+.table-container td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    vertical-align: top;
+}
+
+.table-container th {
+    background-color: var(--secondary-color);
+    color: white;
+    font-weight: 600;
+}
+
+/* הדגשות בתוך הטבלה */
+.table-highlight {
+    font-weight: bold;
+    display: block;
+    font-size: 1.05rem;
+    color: #333;
+}
+
+.table-desc {
+    color: #555;
+    font-size: 0.95rem;
+}
+
+/* כפתורי פעולה בטבלה - העיצוב המבוקש */
+.edit-btn {
+    background-color: #f39c12; /* כתום */
+    color: white;
+    border: none;
+    padding: 5px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-left: 5px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+
+.edit-btn:hover {
+    background-color: #e67e22;
+}
+
+.delete-btn {
+    background-color: #c0392b; /* אדום */
+    color: white;
+    border: none;
+    padding: 5px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+
+.delete-btn:hover {
+    background-color: #a93226;
+}
+
+/* =========================================
+   2. עיצוב המסמך (תצוגה מקדימה - A4)
+   ========================================= */
+.cv-paper {
+    background-color: white;
+    width: 100%;
+    max-width: 800px; /* רוחב A4 סטנדרטי */
+    min-height: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+    border: 1px solid #e1e1e1;
+}
+
+/* --- כותרת ראשית (פרטי משתמש) --- */
+.cv-header {
+    text-align: center;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.cv-name {
+    font-size: 2rem; 
+    font-weight: bold; 
+    color: var(--secondary-color);
+    margin: 0;
+}
+
+.cv-contact {
+    color: #666;
+    margin-top: 5px;
+    font-size: 0.95rem;
+}
+
+/* --- כותרות פרקים (ניסיון / השכלה) --- */
+.cv-section-title {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    border-bottom: 1px solid #eee;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+/* --- עיצוב פריטים (מבוסס על ה-Template) --- */
+.cv-item {
+    margin-bottom: 20px;
+    page-break-inside: avoid; /* מונע חיתוך בהדפסה באמצע פריט */
+}
+
+/* שורה ראשונה: תפקיד + תאריכים */
+.cv-item-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 4px;
+}
+
+.item-title-text {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #2c3e50;
+}
+
+.item-dates {
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    background-color: #f4f8fb;
+    padding: 2px 8px;
+    border-radius: 10px;
+}
+
+/* שורה שניה: מעסיק / מוסד */
+.cv-item-subtitle {
+    font-weight: 600;
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 6px;
+}
+
+/* תיאור */
+.cv-item-desc {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.5;
+    white-space: pre-wrap; /* שומר על ירידות שורה מה-Textarea */
+}
+
+/* כפתור שמירה במצב עריכה - טופס */
+button[type="submit"].updating {
+    background-color: #f39c12;
+}

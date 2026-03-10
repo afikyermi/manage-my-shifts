@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage My Shifts - הרשמה</title>
+    <script src="js/utils.js" defer></script>
+    <script src="js/signup.js" defer></script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/signup.css">
+</head>
+<body>
+    <header>
+        <h1>Manage My Shifts</h1>
+        <h2>עמוד הרשמה</h2>
+    </header>
+
+    <main>
+        <form id="signupForm" novalidate>
+            <div>
+                <label for="signupEmail">מייל:</label>
+                <input type="email" id="signupEmail" name="email" autocomplete="email">
+                <span id="signupEmailError" class="field-error"></span>
+            </div>
+
+            <div>
+                <label for="signupUsername">שם משתמש (לפחות 6 תווים):</label>
+                <input type="text" id="signupUsername" name="username" autocomplete="username">
+                <span id="signupUsernameError" class="field-error"></span>
+            </div>
+
+            <div>
+                <label for="signupPassword">סיסמה (לפחות 8 תווים, אות ומספר):</label>
+                <input type="password" id="signupPassword" name="password" autocomplete="new-password">
+                <span id="signupPasswordError" class="field-error"></span>
+            </div>
+
+            <div>
+                <label for="signupConfirmPassword">אימות סיסמה:</label>
+                <input type="password" id="signupConfirmPassword" name="confirmPassword" autocomplete="new-password">
+                <span id="signupConfirmPasswordError" class="field-error"></span>
+            </div>
+
+            <div>
+                <label for="signupFirstName">שם פרטי:</label>
+                <input type="text" id="signupFirstName" name="firstName" autocomplete="given-name">
+                <span id="signupFirstNameError" class="field-error"></span>
+            </div>
+
+            <div>
+                <label for="signupLastName">שם משפחה:</label>
+                <input type="text" id="signupLastName" name="lastName" autocomplete="family-name">
+                <span id="signupLastNameError" class="field-error"></span>
+            </div>
+
+            <div>
+                <label for="signupAge">גיל (18-65):</label>
+                <input type="number" id="signupAge" name="age" min="18" max="65">
+                <span id="signupAgeError" class="field-error"></span>
+            </div>
+
+            <div>
+                <label for="signupIdLast4">4 ספרות אחרונות של תעודת הזהות (לשחזור סיסמה):</label>
+                <input type="password" id="signupIdLast4" name="idLast4" maxlength="4" inputmode="numeric">
+                <span id="signupIdLast4Error" class="field-error"></span>
+            </div>
+
+            <div>
+                <span id="signupGeneralMessage" class="form-message"></span>
+            </div>
+
+            <div>
+                <button type="submit">הרשמה</button>
+            </div>
+        </form>
+
+        <hr>
+
+        <p>
+            כבר רשום?
+            <a href="index.html">כניסה</a>
+        </p>
+    </main>
+</body>
+</html>

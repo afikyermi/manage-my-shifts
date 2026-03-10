@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage My Shifts - כניסה</title>
+    <script src="js/utils.js" defer></script>
+    <script src="js/index.js" defer></script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <header>
+        <h1>Manage My Shifts</h1>
+        <h2>עמוד כניסה</h2>
+    </header>
+
+    <main>
+        <form id="loginForm" novalidate>
+            <div>
+                <label for="loginUsername">שם משתמש:</label>
+                <input type="text" id="loginUsername" name="username" autocomplete="username">
+                <span id="loginUsernameError" class="field-error"></span>
+            </div>
+
+            <div>
+                <label for="loginPassword">סיסמה:</label>
+                <input type="password" id="loginPassword" name="password" autocomplete="current-password">
+                <span id="loginPasswordError" class="field-error"></span>
+            </div>
+
+            <div>
+                <span id="loginGeneralError" class="form-message"></span>
+            </div>
+
+            <div>
+                <button type="submit">כניסה</button>
+            </div>
+        </form>
+
+        <hr>
+
+        <p>
+            אין לך משתמש?
+            <a href="signup.html">הרשמה</a>
+        </p>
+        <p>
+            <a href="forgot-password.html">שכחתי סיסמה</a>
+        </p>
+    </main>
+</body>
+</html>

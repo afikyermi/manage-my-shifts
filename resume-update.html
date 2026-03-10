@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage My Shifts - קורות חיים</title>
+    <script src="js/utils.js" defer></script>
+    <script src="js/resume-update.js" defer></script>
+    
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/resume-update.css">
+</head>
+<body>
+    <header>
+        <h1>Manage My Shifts</h1>
+        <h2>עדכון קורות חיים</h2>
+    </header>
+
+    <nav>
+        <div class="nav-right">
+            שלום, <span id="currentUserName"></span>
+        </div>
+        <ul class="nav-center">
+            <li><a href="shifts.html">משמרות</a></li>
+            <li><a href="profile-update.html">עריכת פרופיל</a></li>
+            <li><a href="add-update-shift.html">הוספת משמרת</a></li>
+            <li><a href="resume-update.html">קורות חיים</a></li>
+        </ul>
+        <div class="nav-left">
+            <button type="button" id="logoutButton">התנתק</button>
+        </div>
+    </nav>
+
+    <main>
+        <section>
+            <h3>💼 ניהול ניסיון תעסוקתי</h3>
+            <form id="employmentForm">
+                <div class="form-row">
+                    <div>
+                        <label for="jobStartYear">שנת התחלה:</label>
+                        <input type="number" id="jobStartYear" required placeholder="2020">
+                    </div>
+                    <div>
+                        <label for="jobEndYear">שנת סיום:</label>
+                        <input type="number" id="jobEndYear" placeholder="כיום">
+                    </div>
+                </div>
+                <div>
+                    <label for="jobEmployer">מעסיק:</label>
+                    <input type="text" id="jobEmployer" required placeholder="שם החברה">
+                </div>
+                <div>
+                    <label for="jobRole">תפקיד:</label>
+                    <input type="text" id="jobRole" required placeholder="שם התפקיד">
+                </div>
+                <div>
+                    <label for="jobDescription">תיאור:</label>
+                    <textarea id="jobDescription" placeholder="פירוט תחומי אחריות..."></textarea>
+                </div>
+                <button type="submit">שמור ניסיון תעסוקתי</button>
+            </form>
+
+            <br>
+            <h4>רשימת עבודות (לעריכה ומחיקה):</h4>
+            <div class="table-container">
+                <table id="employmentTable">
+                    <thead>
+                        <tr>
+                            <th>שנים</th>
+                            <th>פרטים</th>
+                            <th>פעולות</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h3>🎓 ניהול השכלה</h3>
+            <form id="educationForm">
+                <div class="form-row">
+                    <div>
+                        <label for="eduStartYear">שנת התחלה:</label>
+                        <input type="number" id="eduStartYear" required placeholder="2018">
+                    </div>
+                    <div>
+                        <label for="eduEndYear">שנת סיום:</label>
+                        <input type="number" id="eduEndYear" placeholder="2022">
+                    </div>
+                </div>
+                <div>
+                    <label for="eduInstitution">מוסד לימודים:</label>
+                    <input type="text" id="eduInstitution" required placeholder="אוניברסיטה/מכללה">
+                </div>
+                <div>
+                    <label for="eduDegree">תואר / תעודה:</label>
+                    <input type="text" id="eduDegree" required placeholder="תואר ראשון במדעי המחשב">
+                </div>
+                <div>
+                    <label for="eduDescription">תיאור:</label>
+                    <textarea id="eduDescription" placeholder="הצטיינות, התמחויות..."></textarea>
+                </div>
+                <button type="submit">שמור השכלה</button>
+            </form>
+
+            <br>
+            <h4>רשימת השכלה (לעריכה ומחיקה):</h4>
+            <div class="table-container">
+                <table id="educationTable">
+                    <thead>
+                        <tr>
+                            <th>שנים</th>
+                            <th>פרטים</th>
+                            <th>פעולות</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section style="background-color: #e9ecef; padding: 40px 20px;">
+            <h3 style="text-align:center; border:none; margin-bottom:20px;">📄 תצוגה מקדימה של המסמך</h3>
+            
+            <div id="cvDocument" class="cv-paper">
+                
+                <div id="cvHeader" class="cv-header"></div>
+
+                <div class="cv-body">
+                    <div class="cv-section">
+                        <h4 class="cv-section-title">ניסיון תעסוקתי</h4>
+                        <div id="cvEmploymentPreview"></div>
+                    </div>
+
+                    <div class="cv-section">
+                        <h4 class="cv-section-title">השכלה</h4>
+                        <div id="cvEducationPreview"></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <template id="cvItemTemplate">
+        <div class="cv-item">
+            <div class="cv-item-title">
+                <span class="item-title-text"></span> 
+                <span class="item-dates"></span>      
+            </div>
+            <div class="cv-item-subtitle"></div>      
+            <div class="cv-item-desc"></div>          
+        </div>
+    </template>
+</body>
+</html>
